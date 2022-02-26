@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess</title>
+    <link rel="stylesheet" href="lib/style.css">
+    <script src="lib/script.js"></script>
+    <link type="image/x-icon" rel="shortcut icon" href="resources/favicon.ico">
+</head>
+<body>
+    <div class="description">   
+        <h1>Guess the number</h1>
+        <p>Guess a number between 1 and 100. The box color will change because of the input number. If it is closer to the number it is closer to green else to red.</p>
+    </div>
+    <div class="box">
+        <div class="elements">
+            <p>You have <span id="tries">10</span> tries.</p>
+            <div id="colorbox" class="basics"></div>
+            <input type="number" id="input" min="1" max="100" class="basics" onkeyup="success()">
+            <button id="button" class="basics" onclick="toGuess()" disabled>Guess</button>
+            <h3 id="output"></h3>
+        </div>
+    </div>
+</body>
+</html>
